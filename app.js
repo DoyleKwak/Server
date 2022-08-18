@@ -56,9 +56,9 @@ app.get('/language_all/',(req,res)=>{
         if(err){
             console.log('Error ocquired');
         }else{
-            res.send('ok');
+            
             res.send(result.rows);
-            console.log('ok');
+            
         }
     })
 })
