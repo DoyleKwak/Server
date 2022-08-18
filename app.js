@@ -15,7 +15,7 @@ const dbInfo = {
     ,port:5432
     ,host:'ec2-54-85-56-210.compute-1.amazonaws.com'
     ,database:'d3e2bib785u554'
-    ,ssl:{rejectUnAuthorized:false}
+    ,ssl:{rejectUnauthorized:false}
 }
 
 
@@ -52,7 +52,7 @@ app.get('/language_all/',(req,res)=>{
     const client = new Client(dbInfo);
 
     client.connect();
-    client.query('select language,msg from public."language"',(err,result)=>{
+    client.query('select * from public."language"',(err,result)=>{
         if(err){
             console.log('Error ocquired');
         }else{
