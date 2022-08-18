@@ -4,6 +4,24 @@ const cors = require('cors');
 const { Client } = require('pg')
 // const dbInfo = require('../DB/dbInfo')
 
+const dbInfo = {
+    // user:'postgres'
+    // ,password:'1234'
+    // ,port:5432
+    // ,host:'localhost'
+    // ,database:'postgres'
+    user:'envvirsgaluozg'
+    ,password:'f5a36fc673a7211849f1cba9b71472c5a237f03cc644c3faf9bcf42ceead47d9'
+    ,port:5432
+    ,host:'ec2-54-85-56-210.compute-1.amazonaws.com'
+    ,database:'d3e2bib785u554'
+    ,ssl:{rejectUnAuthorized:false}
+}
+
+
+
+
+
 app.use(cors());
 
 app.use(express.json());
